@@ -1,7 +1,105 @@
 {
   "project": "文化项目成效与资金资料",
+  "rules": [
+    {
+      "code": "rule-cultural-2026",
+      "name": "省级文化产业扶持规则（2026）",
+      "version": 1,
+      "effective_date": "2026-01-01",
+      "support_categories": ["数字文化", "公共文化服务"],
+      "stage_cap": "150000.00",
+      "subsidy_rate": "0.80",
+      "required_metrics": ["service_count", "satisfaction"],
+      "metric_dims": [
+        {"key": "service_count", "label": "服务人次", "agg": "sum", "traffic": false},
+        {"key": "satisfaction", "label": "公众满意度（5分制）", "agg": "avg", "traffic": false},
+        {"key": "repeat_participation", "label": "重复参与率", "agg": "avg", "traffic": false},
+        {"key": "views", "label": "传播量", "agg": "sum", "traffic": true}
+      ],
+      "traffic_metric_key": "views",
+      "notes": "首版规则：传播量仅为参考维度之一，不得单独作为成效结论。"
+    },
+    {
+      "code": "rule-cultural-2026",
+      "name": "省级文化产业扶持规则（2026 年中修订）",
+      "version": 2,
+      "effective_date": "2026-07-01",
+      "support_categories": ["数字文化", "公共文化服务", "文化惠民"],
+      "stage_cap": "200000.00",
+      "subsidy_rate": "0.90",
+      "required_metrics": ["service_count", "satisfaction"],
+      "metric_dims": [
+        {"key": "service_count", "label": "服务人次", "agg": "sum", "traffic": false},
+        {"key": "satisfaction", "label": "公众满意度（5分制）", "agg": "avg", "traffic": false},
+        {"key": "repeat_participation", "label": "重复参与率", "agg": "avg", "traffic": false},
+        {"key": "views", "label": "传播量", "agg": "sum", "traffic": true}
+      ],
+      "traffic_metric_key": "views",
+      "notes": "年中换版：提高单阶段上限与补贴比例；仅适用于尚未锁定的阶段。"
+    }
+  ],
   "records": [
-    {"id": "program-digital-stage", "kind": "program", "regions": ["城区", "县域"], "targets": ["优质供给", "科技融合"], "funding_tranches": 3},
-    {"id": "milestone-stage-01", "kind": "milestone", "program_id": "program-digital-stage", "evidence_types": ["合同", "服务记录", "公众反馈"]}
+    {
+      "id": "program-digital-stage",
+      "kind": "program",
+      "name": "数字文化舞台计划",
+      "region": "城区",
+      "regions": ["城区", "县域"],
+      "applicant_org_id": "org-digital-center",
+      "targets": ["优质供给", "科技融合"],
+      "funding_tranches": 3,
+      "registered_date": "2026-01-08"
+    },
+    {
+      "id": "milestone-stage-01",
+      "kind": "milestone",
+      "program_id": "program-digital-stage",
+      "name": "首期云剧场",
+      "evidence_types": ["合同", "服务记录", "公众反馈"],
+      "planned_amount": "120000.00",
+      "due_date": "2026-06-30",
+      "commitment": {"metrics": {"service_count": 1000, "satisfaction": 4.5}}
+    },
+    {
+      "id": "milestone-stage-02",
+      "kind": "milestone",
+      "program_id": "program-digital-stage",
+      "name": "县域联动巡展",
+      "evidence_types": ["合同", "服务记录", "公众反馈"],
+      "planned_amount": "150000.00",
+      "due_date": "2026-10-31",
+      "commitment": {"metrics": {"service_count": 1500, "satisfaction": 4.5}}
+    },
+    {
+      "id": "milestone-stage-03",
+      "kind": "milestone",
+      "program_id": "program-digital-stage",
+      "name": "年度数字成果展",
+      "evidence_types": ["合同", "服务记录", "公众反馈"],
+      "planned_amount": "90000.00",
+      "due_date": "2026-12-31",
+      "commitment": {"metrics": {"service_count": 600, "satisfaction": 4.3}}
+    },
+    {
+      "id": "program-grassroots-tour",
+      "kind": "program",
+      "name": "基层巡演扶持项目",
+      "region": "县域",
+      "regions": ["县域"],
+      "applicant_org_id": "org-grassroots",
+      "targets": ["优质供给"],
+      "funding_tranches": 1,
+      "registered_date": "2026-01-09"
+    },
+    {
+      "id": "milestone-tour-01",
+      "kind": "milestone",
+      "program_id": "program-grassroots-tour",
+      "name": "基层巡演首站",
+      "evidence_types": ["合同", "服务记录", "公众反馈"],
+      "planned_amount": "80000.00",
+      "due_date": "2026-08-31",
+      "commitment": {"metrics": {"service_count": 800, "satisfaction": 4.2}}
+    }
   ]
 }

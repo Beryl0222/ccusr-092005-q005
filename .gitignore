@@ -9,3 +9,7 @@ dist/
 build/
 coverage/
 .DS_Store
+# 运行时事件日志与密件库（不得入库）
+data/
+*.events.jsonl
+secrets.json
